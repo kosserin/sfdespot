@@ -1,0 +1,82 @@
+@import "./styles/colors";
+@import "./styles/media-queries";
+@import "./styles/nav";
+@import "./styles/header";
+@import "./styles/main";
+@import "./styles/footer";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body,
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 700vh;
+  background: linear-gradient(
+    to bottom right,
+    rgba($primary, 1),
+    rgba($primary, 1)
+  );
+}
+
+.first-banner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.2;
+  z-index: -1;
+  transform: translate(30%, -35%);
+  width: 50vw;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: 500ms ease;
+
+  &.appear {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+}
+
+.slide-in {
+  transform: translateY(3rem);
+  transition: 500ms ease;
+
+  &.appear {
+    transform: translateY(0);
+  }
+}
+
+.slide-left {
+  transform: translateX(-3rem);
+  transition: 500ms ease;
+
+  &.appear {
+    transform: translateX(0);
+  }
+}
+
+.slide-right {
+  transform: translateX(3rem);
+  transition: 500ms ease;
+
+  &.appear {
+    transform: translateX(0);
+  }
+}

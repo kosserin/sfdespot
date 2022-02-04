@@ -1,0 +1,136 @@
+@import "./media-queries";
+
+$primary: #d2af6d;
+$secondary: #921010;
+$black: #000000;
+$darker: #bd9d62;
+$gray: #333333;
+$hoverRed: #b91313;
+
+h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 70px;
+
+  @include phone {
+    font-size: 3.2rem !important;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  @include phone {
+    font-size: 1rem;
+  }
+}
+
+p {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.nav-anchor {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: $black;
+  transition: 250ms ease;
+
+  &:hover {
+    color: $gray;
+  }
+}
+
+.active {
+  color: $secondary;
+
+  &:hover {
+    color: $black;
+  }
+}
+
+li.active {
+  border-bottom-color: $secondary !important;
+}
+
+.colored-button {
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  background-color: $secondary;
+  color: $primary;
+  padding: 0 1rem;
+  height: 2.8rem;
+  display: flex;
+  min-width: fit-content;
+  width: 8rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.45);
+  transition: 250ms ease;
+  gap: 8px;
+
+  &:hover {
+    color: $primary;
+    background-color: $hoverRed;
+  }
+
+  i {
+    font-size: 1.25rem;
+  }
+
+  img {
+    width: 1.25rem;
+  }
+}
+
+.swiper-button {
+  position: absolute;
+  top: 50%;
+  color: $primary;
+  padding: 1.5rem;
+  background-color: $secondary;
+  border-radius: 50%;
+  box-shadow: 0px 0px 25px rgba($color: $black, $alpha: 0.4);
+  transition: 250ms ease;
+
+  &:hover {
+    background-color: $hoverRed;
+  }
+
+  @include tablet {
+    display: none;
+  }
+
+  &.swiper-button-prev {
+    left: 0%;
+    transform: translate(-50%, -30%);
+  }
+
+  &.swiper-button-next {
+    right: 0%;
+    transform: translate(50%, -30%);
+  }
+
+  &.swiper-button-disabled {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+}
