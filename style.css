@@ -1827,7 +1827,7 @@ footer .copyright {
 
 @media screen and (max-width: 768px) {
   footer .copyright {
-    padding-bottom: 4.75rem;
+    padding-bottom: 5rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
