@@ -1252,6 +1252,13 @@ main section#uspesi p {
   text-align: center;
 }
 
+@media screen and (max-width: 768px) {
+  main section#uspesi h2,
+  main section#uspesi p {
+    text-align: left;
+  }
+}
+
 main section#uspesi p {
   margin: 10px auto 28px auto;
   width: 100%;
