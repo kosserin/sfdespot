@@ -588,6 +588,7 @@ main {
 
                 textarea {
                   padding: 1rem;
+                  font-size: 0.875rem;
                 }
               }
 
@@ -666,6 +667,11 @@ main {
         justify-content: center;
         align-items: center;
         gap: 3rem;
+
+        @include phone {
+          justify-content: flex-start;
+          align-items: flex-start;
+        }
 
         img {
           width: 200px;

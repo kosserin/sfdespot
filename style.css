@@ -1586,6 +1586,7 @@ main section#kontakt .kontakt-container .right-side .form-text__container form .
 
 main section#kontakt .kontakt-container .right-side .form-text__container form .form-group textarea {
   padding: 1rem;
+  font-size: 0.875rem;
 }
 
 main section#kontakt .kontakt-container .right-side .form-text__container form button {
@@ -1678,6 +1679,17 @@ main section#prijatelji .prijatelji-div {
       -ms-flex-align: center;
           align-items: center;
   gap: 3rem;
+}
+
+@media screen and (max-width: 600px) {
+  main section#prijatelji .prijatelji-div {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
 }
 
 main section#prijatelji .prijatelji-div img {
