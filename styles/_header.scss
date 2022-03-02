@@ -70,6 +70,7 @@
     border-radius: 10px;
     min-width: 300px;
     height: fit-content;
+    box-shadow: 5px 5px 5px rgba($color: $black, $alpha: 0.15);
 
     @include tablet {
       max-width: 450px;

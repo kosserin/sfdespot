@@ -35,8 +35,8 @@ main {
         margin: 1.5rem 0 2rem 0;
 
         @include tablet {
-          gap: 0rem;
-          justify-content: space-between;
+          gap: 1rem;
+          justify-content: center;
         }
         li {
           cursor: pointer;
@@ -93,6 +93,10 @@ main {
           img {
             width: 35vw;
             border-radius: 10px;
+            max-width: 450px;
+            max-height: 450px;
+            object-fit: cover;
+            box-shadow: 5px 5px 5px rgba($color: $black, $alpha: 0.15);
 
             @include tablet {
               width: 100%;
@@ -129,15 +133,37 @@ main {
         text-align: left;
       }
 
-      p {
-        color: $gray;
-        width: 100%;
-        max-width: 800px;
-        margin: 10px auto 1rem auto;
+      h3 {
+        margin-bottom: 2rem;
       }
 
-      img {
-        max-width: 100%;
+      .treneri {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+
+        @include tablet {
+          grid-template-columns: 1fr;
+        }
+
+        img {
+          width: 70%;
+          height: 30vh;
+          box-shadow: 5px 5px 5px rgba($color: $black, $alpha: 0.15);
+          border-radius: 3px;
+          margin-bottom: 5px;
+
+          @include mini {
+            height: 30vh;
+          }
+
+          @include tablet {
+            width: 100%;
+            height: fit-content;
+          }
+        }
       }
     }
 
@@ -203,6 +229,8 @@ main {
       img {
         height: fit-content;
         max-width: 600px;
+        border-radius: 0 5px 5px 0;
+        box-shadow: 5px 5px 5px rgba($color: $black, $alpha: 0.15);
 
         @include miniLaptop {
           max-width: 500px;
@@ -480,6 +508,23 @@ main {
                 font-size: 1.25rem;
               }
             }
+
+            .mobile-group {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+
+              a {
+                text-decoration: none;
+                color: $primary;
+                font-size: 0.875rem;
+                font-weight: 600;
+
+                i {
+                  font-size: 1.25rem;
+                }
+              }
+            }
           }
         }
 
@@ -593,23 +638,10 @@ main {
       }
     }
 
-    &#slogan {
+    &#prijatelji {
       margin: 0;
       padding: 3rem 10vw;
       background-color: $black;
-
-      h1 {
-        color: $primary;
-        text-align: center;
-
-        @include phone {
-          text-align: left;
-        }
-
-        span {
-          color: $secondary;
-        }
-      }
 
       @include miniLaptop {
         padding: 5rem 5vw;
@@ -617,6 +649,27 @@ main {
 
       @include tablet {
         padding: 2.5rem 5vw;
+      }
+
+      h2 {
+        color: $primary;
+        text-align: center;
+
+        @include phone {
+          text-align: left;
+        }
+      }
+
+      .prijatelji-div {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+
+        img {
+          width: 200px;
+        }
       }
     }
   }

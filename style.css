@@ -635,6 +635,8 @@ li.active {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
 }
 
 @media screen and (max-width: 768px) {
@@ -837,10 +839,10 @@ main section#vrste-treniranja ul {
 
 @media screen and (max-width: 768px) {
   main section#vrste-treniranja ul {
-    gap: 0rem;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    gap: 1rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -916,6 +918,12 @@ main section#vrste-treniranja .vrste-treniranja__displej .container.show-contain
 main section#vrste-treniranja .vrste-treniranja__displej .container img {
   width: 35vw;
   border-radius: 10px;
+  max-width: 450px;
+  max-height: 450px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
 }
 
 @media screen and (max-width: 768px) {
@@ -963,15 +971,53 @@ main section#strucni-treneri {
   }
 }
 
-main section#strucni-treneri p {
-  color: #333333;
-  width: 100%;
-  max-width: 800px;
-  margin: 10px auto 1rem auto;
+main section#strucni-treneri h3 {
+  margin-bottom: 2rem;
 }
 
-main section#strucni-treneri img {
-  max-width: 100%;
+main section#strucni-treneri .treneri {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  main section#strucni-treneri .treneri {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+main section#strucni-treneri .treneri img {
+  width: 70%;
+  height: 30vh;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+  margin-bottom: 5px;
+}
+
+@media screen and (max-width: 970px) {
+  main section#strucni-treneri .treneri img {
+    height: 30vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main section#strucni-treneri .treneri img {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
 }
 
 main section#aktivnosti {
@@ -1049,6 +1095,9 @@ main section#cilj img {
   height: -moz-fit-content;
   height: fit-content;
   max-width: 600px;
+  border-radius: 0 5px 5px 0;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
 }
 
 @media screen and (max-width: 1180px) {
@@ -1430,6 +1479,27 @@ main section#kontakt .kontakt-container .left-side .social-container .item-group
   font-size: 1.25rem;
 }
 
+main section#kontakt .kontakt-container .left-side .social-container .mobile-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+main section#kontakt .kontakt-container .left-side .social-container .mobile-group a {
+  text-decoration: none;
+  color: #d2af6d;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+main section#kontakt .kontakt-container .left-side .social-container .mobile-group a i {
+  font-size: 1.25rem;
+}
+
 main section#kontakt .kontakt-container .right-side {
   min-width: 600px;
   width: 100%;
@@ -1567,37 +1637,51 @@ main section#kontakt .kontakt-container .right-side .social-container a i {
   font-size: 1.25rem;
 }
 
-main section#slogan {
+main section#prijatelji {
   margin: 0;
   padding: 3rem 10vw;
   background-color: #000000;
 }
 
-main section#slogan h1 {
-  color: #d2af6d;
-  text-align: center;
-}
-
-@media screen and (max-width: 600px) {
-  main section#slogan h1 {
-    text-align: left;
-  }
-}
-
-main section#slogan h1 span {
-  color: #921010;
-}
-
 @media screen and (max-width: 1180px) {
-  main section#slogan {
+  main section#prijatelji {
     padding: 5rem 5vw;
   }
 }
 
 @media screen and (max-width: 768px) {
-  main section#slogan {
+  main section#prijatelji {
     padding: 2.5rem 5vw;
   }
+}
+
+main section#prijatelji h2 {
+  color: #d2af6d;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  main section#prijatelji h2 {
+    text-align: left;
+  }
+}
+
+main section#prijatelji .prijatelji-div {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3rem;
+}
+
+main section#prijatelji .prijatelji-div img {
+  width: 200px;
 }
 
 h1 {
@@ -1893,7 +1977,6 @@ html {
 }
 
 body {
-  min-height: 700vh;
   background: -webkit-gradient(linear, left top, right bottom, from(#d2af6d), to(#d2af6d));
   background: linear-gradient(to bottom right, #d2af6d, #d2af6d);
 }

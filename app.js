@@ -2,7 +2,7 @@ const changeDisplay = () => {
     const list = document.querySelectorAll('.vrste-treniranja__lista li');
     const containers = document.querySelectorAll('#vrste-treniranja .container');
     const display = document.querySelector('.vrste-treniranja__displej')
-    containers[1].classList.add('show-container')
+    containers[0].classList.add('show-container')
     
     list.forEach((item, index) => {
         item.addEventListener('click', () => {
@@ -26,7 +26,7 @@ const scrollItems = () => {
     const slidersLeft = document.querySelectorAll('.slide-left');
     const slidersRight = document.querySelectorAll('.slide-right');
     const options = {
-        rootMargin: "-0px 0px 0px 0px"
+        rootMargin: "300px 0px 0px 0px"
     };
 
     const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
