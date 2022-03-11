@@ -1,5 +1,5 @@
 # Football School "Despot" Velika Plana
-Website for local football school. Project is designed with Figma and coded with HTML-Sass-JavaScript. Honorable mentions are sliders that are implemented with Swiper.js and intersectionObserver that gives smooth slide/fade transition on load.
+Website for local football school. Project is designed with Figma and coded with HTML-Sass-JavaScript. Honorable mentions are sliders that are implemented with Swiper.js and intersectionObserver that gives smooth slide/fade transition on load. On this link you can find Figma design I created: https://www.figma.com/file/4igm5PeU20t6smDkmDloIq/Despot?node-id=0%3A1
 
 Desktop preview
 ![Screenshot 2022-03-11 at 19-00-45 Школа фудбала Деспот Велика Плана](https://user-images.githubusercontent.com/71221268/157924511-f10d33eb-0807-4f65-ac92-40ee2a473b82.png)
